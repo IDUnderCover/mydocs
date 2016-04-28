@@ -1,5 +1,9 @@
 FROM alpine:latest
 
-RUN apk --update add nginx python python-dev py-pip gcc libgcc g++ && \
+MAINTAINER NI JIALIANG
+
+RUN apk --update add nginx python py-pip uwsgi uwsgi-python && \
     pip install --upgrade pip && \
-    pip install flask supervisor uwsgi
+    pip install flask supervisor requests 
+
+
