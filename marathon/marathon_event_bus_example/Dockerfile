@@ -7,3 +7,5 @@ RUN apk --update add nginx python py-pip uwsgi uwsgi-python && \
     pip install flask supervisor requests 
 
 
+ENTRYPOINT ["supervisord"]
+
