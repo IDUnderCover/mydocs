@@ -12,6 +12,33 @@
 
 ####配置
 
-创建一个配置文件
+通过 命令`echo_supervisor_conf` 创建一个默认配置文件
 	
 	echo_supervisord_conf > /etc/supervisord.conf
+
+
+###uwsgi
+
+需要注意uwsgi的版本（uWSGI 2.0.12 (64bit) ）
+
+配置文件
+
+
+		<uwsgi>
+		  <pythonpath>/home/chenjiebin/web/flaskdemo</pythonpath>
+		  <module>flask</module>
+		  <callable>app</callable>
+		  <socket>127.0.0.1:5000</socket>
+		  <master/>
+		  <processes>4</processes>
+		  <memory-report/>
+		</uwsgi>
+
+
+启动uwsgi
+ 
+		sudo /usr/local/bin/uwsgi -x $(WD)/app_config.xml
+
+
+
+		/usr/local/bin/uwsgi --http :9090 --wsgi-file world.py --callable app
