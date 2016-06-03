@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="tree">
+
+   </div>
+
+
+
+
+    <script>
+    $('#tree').treeview( { data: JSON.parse('{{ tree | safe }}'), enableLinks: true})
+    </script>
+
+{% endblock content %}
