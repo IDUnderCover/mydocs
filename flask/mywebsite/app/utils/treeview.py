@@ -5,6 +5,7 @@
 # tree 是由多个 tree_node 构成  tree = [tree_node1, tree_node2 ]
 
 from flask import url_for
+from app import flatpages
 # 因为都是相对目录, 所以目录都以字母开头
 def gen_tree_node(path,fullpath=None):
     split_path = path.split('/', 1)
@@ -48,6 +49,14 @@ def combine_node(node_1, node_2):
             else:
                 return node_1
 
+
+def get_tree_view():
+    pages = (p for p in flatpages)
+    tree = new_tree()
+    for page in list(pages):
+        tree = add_tree_node(tree, gen_tree_node(page.path, page.path))
+
+    return tree
 
 
 
