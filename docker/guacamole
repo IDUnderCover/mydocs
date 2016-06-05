@@ -1,0 +1,6 @@
+##HTML5  桌面代理  Guacamole 
+
+guacamole 并不是一个独立的web应用，他由许多组件构成。
+
+![guacamole架构图](http://guacamole.incubator.apache.org/doc/gug/images/guac-arch.png) 
+架构预览
