@@ -25,6 +25,10 @@ def page(path):
 def get_blogs_list():
     return render_template('documents.html')
 
+@app.route('/webcrawlers/', methods = ['GET'])
+def web_crawlers():
+    return render_template('webcrawlers.html')
+
 
 @app.errorhandler(404)
 def internal_error(error):
