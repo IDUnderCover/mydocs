@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*_
 
 import random
+import math
 
 def bubble_sort(lst):
     length = len(lst)
@@ -33,8 +34,23 @@ def insertion_sort(lst):
         lst[j] = tmp
     print(lst)
         
+
+# Hibbard [1,3,7,...,2^k - 1]
 def shell_sort(lst):
-    pass
+    length = len(lst)
+    inc = length / 2
+    while inc > 0:
+        i = inc
+        while i < length:
+            tmp = lst[i]
+            j = i
+            while j >=inc and lst[j-inc] > tmp :
+                lst[j] = lst[j - inc]
+                j = j - inc
+            lst[j] = tmp
+            i = i + 1
+        inc = inc / 2
+    print(lst)
 
 if __name__ == '__main__':
     lst = [1,3,4,6,5,2,2,3,4,9,4,6,8,2,0,-1]
@@ -43,3 +59,5 @@ if __name__ == '__main__':
     select_sort(lst)
     lst = [1,3,4,6,5,2,2,3,4,9,4,6,8,2,0,-1]
     insertion_sort(lst)
+    lst = [1,3,4,6,5,2,2,3,4,9,4,6,8,2,0,-1]
+    shell_sort(lst)
