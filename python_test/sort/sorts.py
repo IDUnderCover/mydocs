@@ -52,6 +52,15 @@ def shell_sort(lst):
         inc = inc / 2
     print(lst)
 
+def heapsort(lst):
+    pass
+
+def mergesort(lst):
+    pass
+
+def quicksort(lst):
+    pass
+
 if __name__ == '__main__':
     lst = [1,3,4,6,5,2,2,3,4,9,4,6,8,2,0,-1]
     bubble_sort(lst)

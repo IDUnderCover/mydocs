@@ -1,0 +1,34 @@
+## June 11
+
+
+###python 核心编程
+
+	###basic
+	1. print() 用 str()  交互式解释器用 repr() 来显示对象
+	2. 下划线' _ '在解释器中有特殊含义，  表示最后一个表达式的值  
+	3. '%s %d' % (value1, value2) 用来替换
+	4. ' >> ' 用来重定向输出 ，例如
+
+	>>>logfile = open('/tmp/log.txt', 'a')
+	>>> print >> logfile , 'Fatal Error'
+	>>> logfile.close()
+	将‘Fatal Error’写入到了log.txt 文件
+
+	5. enumerate() 枚举函数
+	>>> for i,j in enumerate('abc'):
+	..     print(i,j)
+	... 
+	(0, 'a')
+	(1, 'b')
+	(2, 'c')
+	
+	6.列表解析
+	>>> lst = [x**2 for x in range(5) if not x % 2]
+	>>> lst
+	[0, 4, 16]
+
+	7. __name__ 指示模块应如何被加载，模块被导入 __name__ 为模块名，直接运行则为__main__.
+
+
+	
+	
