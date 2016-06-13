@@ -11,7 +11,7 @@
 
 	>>>logfile = open('/tmp/log.txt', 'a')
 	>>> print >> logfile , 'Fatal Error'
-	>>> logfile.close()
+	>>> logfile.close()exit()
 	将‘Fatal Error’写入到了log.txt 文件
 
 	5. enumerate() 枚举函数
@@ -27,7 +27,9 @@
 	>>> lst
 	[0, 4, 16]
 
-	7. __name__ 指示模块应如何被加载，模块被导入 __name__ 为模块名，直接运行则为__main__.
+	7. __name__ 指示模块应如何被加载，模块被导入 __name__ 为模块名，直接运行则为__main__. 可以将测试代码写在 if __name__ == '__main__' 里。
+
+
 
 
 	
