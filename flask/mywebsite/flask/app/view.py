@@ -13,7 +13,7 @@ from utils import treeview
 def index():
 
     pages = (p for p in flatpages)
-    return render_template('index.html', pages=pages, tree=json.dumps(treeview.get_tree_view()))
+    return render_template('index.html', page=pages.next(), tree=json.dumps(treeview.get_tree_view()))
 
 @app.route('/pages/<path:path>/')
 def page(path):
