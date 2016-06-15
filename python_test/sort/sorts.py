@@ -58,9 +58,34 @@ def heapsort(lst):
 def mergesort(lst):
     pass
 
-def quicksort(lst):
-    pass
+def quicksort(lst,l,r):
+    if l <  r:
+        index = partition(lst, l ,r)
+        quicksort(lst, 0 , index)
+        quicksort(lst, index+1, r)
 
+
+def partition(lst, l, r):
+    left = l
+    right = r
+    # 以第一个数为基准
+    val = lst[l]
+    while left < right:
+        # 从右向左寻找比val小的数
+        while left < right and lst[right] >= val:
+            right -= 1
+            
+        if left < right:
+            lst[left] = lst[right]
+            left += 1
+        # 从左向右找比val大的数
+        while left < right and lst[left] <= val:
+            left += 1
+        if left < right:
+            lst[right] = lst[left]
+            right -= 1
+    lst[left] = val 
+    return left
 if __name__ == '__main__':
     lst = [1,3,4,6,5,2,2,3,4,9,4,6,8,2,0,-1]
     bubble_sort(lst)
@@ -70,3 +95,6 @@ if __name__ == '__main__':
     insertion_sort(lst)
     lst = [1,3,4,6,5,2,2,3,4,9,4,6,8,2,0,-1]
     shell_sort(lst)
+    lst = [1,3,4,6,5,2,2,3,4,9,4,6,8,2,0,-1]
+    quicksort(lst,0, len(lst)-1)
+    print(lst)
