@@ -100,6 +100,8 @@ GPA(3.6)  在校获得多次校奖学金, 校外奖学金。
 3. [BerkeleyX: CS100.1x Introduction to Big Data with Apache Spark](https://courses.edx.org/courses/BerkeleyX/CS100.1x/1T2015/info) [课程证书](https://s3.amazonaws.com/verify.edx.org/downloads/45919685f8df47f08e590679b954b30f/Certificate.pdf)
 4. [BerkeleyX: CS190.1x Scalable Machine Learning](https://courses.edx.org/courses/BerkeleyX/CS190.1x/1T2015/info)  [课程证书](https://s3.amazonaws.com/verify.edx.org/downloads/40754021da08441197bb3e9b96e91826/Certificate.pdf)
 
+在线简历地址 https://github.com/IDUnderCover/mydocs/tree/master/resume
+
 
 
 

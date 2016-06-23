@@ -93,10 +93,11 @@ GPA(3.6)  在校获得多次校奖学金, 校外奖学金。
 热爱学习互联网技术，在 `Coursera edx` 上完成多门课程。 在创业公司的一年里，磨练了意志，抗压能力强。自我驱动。
 
 完成的课程列表
-1.[Stanford University: Machine Learning](https://www.coursera.org/learn/machine-learning)   [课程证书](http://o913sn63o.bkt.clouddn.com/Coursera-ml.pdf)
-2.[Johns Hopkins University: R  Programming ](https://www.coursera.org/learn/r-programming)[课程证书](http://o913sn63o.bkt.clouddn.com/Coursera-rprog.pdf)
-3.[BerkeleyX: CS100.1x Introduction to Big Data with Apache Spark](https://courses.edx.org/courses/BerkeleyX/CS100.1x/1T2015/info) [课程证书](https://s3.amazonaws.com/verify.edx.org/downloads/45919685f8df47f08e590679b954b30f/Certificate.pdf)
-4.[BerkeleyX: CS190.1x Scalable Machine Learning](https://courses.edx.org/courses/BerkeleyX/CS190.1x/1T2015/info)  [课程证书](https://s3.amazonaws.com/verify.edx.org/downloads/40754021da08441197bb3e9b96e91826/Certificate.pdf)
+
+1. [Stanford University: Machine Learning](https://www.coursera.org/learn/machine-learning)   [课程证书](http://o913sn63o.bkt.clouddn.com/Coursera-ml.pdf)
+2. [Johns Hopkins University: R  Programming ](https://www.coursera.org/learn/r-programming)[课程证书](http://o913sn63o.bkt.clouddn.com/Coursera-rprog.pdf)
+3. [BerkeleyX: CS100.1x Introduction to Big Data with Apache Spark](https://courses.edx.org/courses/BerkeleyX/CS100.1x/1T2015/info) [课程证书](https://s3.amazonaws.com/verify.edx.org/downloads/45919685f8df47f08e590679b954b30f/Certificate.pdf)
+4. [BerkeleyX: CS190.1x Scalable Machine Learning](https://courses.edx.org/courses/BerkeleyX/CS190.1x/1T2015/info)  [课程证书](https://s3.amazonaws.com/verify.edx.org/downloads/40754021da08441197bb3e9b96e91826/Certificate.pdf)
 
 
 
