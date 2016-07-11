@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf8 -*-
+import subprocess
 
 from socket import *
 from time import ctime
@@ -18,8 +19,19 @@ def handle_client(cli_sock):
             cli_sock.close()
             print "close connection"
             break
-        cli_sock.send('[%s] ACK!  %s' % (ctime(), request))
+        print request
+        output = run_command(request) 
+        cli_sock.send('[%s] ACK!\n  %s' % (ctime(), output))
         print 'receive ' + request 
+
+def run_command(command):
+    try:
+        command = command.strip()
+        output = subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
+    except Exception ,e:
+        output = 'failed to execute command' + str(e)
+    finally:
+        return output
 
 if __name__ == '__main__':
     try:
