@@ -9,9 +9,7 @@ def bubble_sort(lst):
     for i in range(1, length ):
         for j in range(length - i):
             if lst[j] > lst[j+1]:
-                tmp = lst[j]
-                lst[j] = lst[j+1]
-                lst[j+1] = tmp
+                lst[j], lst[j+1] = lst[j+1], lst[j]
     print(lst)
 
 def select_sort(lst):
@@ -19,9 +17,7 @@ def select_sort(lst):
     for i in range(length - 1):
         for j in range(i,length):
             if lst[i] > lst[j]:
-                tmp = lst[i]
-                lst[i] = lst[j]
-                lst[j] = tmp
+                lst[j], lst[i] = lst[i], lst[j]
     print(lst)
 
 def insertion_sort(lst):

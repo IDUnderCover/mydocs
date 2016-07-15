@@ -44,6 +44,9 @@ transformations
 
 Using Catalyst to optimize the required calculations
 
+User Defined Function Transformations (udf)
+slen = udf(lambda s: len(s), IntegerType())
+
 persist or cache data frames in memory or on disk, avoid recomputing  
 
 actions:
