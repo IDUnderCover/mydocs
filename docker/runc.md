@@ -3,7 +3,7 @@
 runc 是一个命令行工具，用来产生大量符合 OCI 标准的容器
 
 
-###Building：
+####Building
 	
 	#安装go
 	$ apt-get install golang    # 版本必须1.6 以上 
@@ -19,7 +19,7 @@ runc 是一个命令行工具，用来产生大量符合 OCI 标准的容器
 	# 编译安装
 	$ make && sudo make install 
 
-###Using  runc
+####Using  runc
 
 创建 OCI Bundle，[bundle](https://github.com/opencontainers/runtime-spec/blob/master/bundle.md)  也就是一个目录，包含了所有container运行所需的文件. 一个容器必须基于root filesystem，我们可以从docker container中提取出来
 		
