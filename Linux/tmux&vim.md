@@ -7,6 +7,8 @@ tmux new-session -s name [init_command]
 
 关闭一个会话
 tmux kill-session -t htop
+重命名一个会话
+prefix + $
 
 prefix + :  进入命令行
 
