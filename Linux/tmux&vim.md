@@ -9,6 +9,7 @@ tmux new-session -s name [init_command]
 tmux kill-session -t htop
 重命名一个会话
 prefix + $
+tmux rename-session -t target newname
 
 prefix + :  进入命令行
 
