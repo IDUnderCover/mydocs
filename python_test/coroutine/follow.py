@@ -5,6 +5,7 @@ from Queue import Queue
 from threading import Thread
 import pickle
 
+
 def coroutine(func):
     def start(*args, **kwargs):
         cr = func(*args, **kwargs)
@@ -12,14 +13,16 @@ def coroutine(func):
         return cr
     return start
 
+
 def follow(thefile, target):
-    thefile.seek(0,2)
+    thefile.seek(0, 2)
     while True:
         line = thefile.readline()
         if not line:
             time.sleep(0.1)
             continue
         target.send(line)
+
 
 @coroutine
 def grep(pattern, target):
@@ -32,6 +35,7 @@ def grep(pattern, target):
     except GeneratorExit:
         print "Going away. "
 
+
 @coroutine
 def printer():
     print "this is printer "
@@ -39,8 +43,10 @@ def printer():
         while True:
             line = (yield)
             print line
+            time.sleep(1)
     except GeneratorExit:
         print "Printer exits"
+
 
 @coroutine
 def broadcast(targets):
@@ -53,9 +59,11 @@ def broadcast(targets):
     except GeneratorExit:
         print "broadcast over"
 
+
 @coroutine
 def threaded(target):
     messages = Queue()
+
     def run_target():
         while True:
             item = messages.get()
@@ -74,6 +82,7 @@ def threaded(target):
     except GeneratorExit:
         messages.put(GeneratorExit)
 
+
 @coroutine
 def send_to(f):
     try:
@@ -84,6 +93,7 @@ def send_to(f):
     except StopIteration:
         f.close()
 
+
 @coroutine
 def recv_from(f, target):
     try:
@@ -93,13 +103,14 @@ def recv_from(f, target):
     except EOFError:
         target.close()
 
+
 def send_func(target):
     for i in range(1000):
         target.send(i)
 
 if __name__ == '__main__':
-    #log_file = open("access.log")
-    #follow(
+    # log_file = open("access.log")
+    # follow(
     #    log_file, threaded(
     #        broadcast([
     #                grep('python', printer()),
@@ -110,12 +121,11 @@ if __name__ == '__main__':
     #    )
     #)
     printer01 = printer()
-    #t1 = threaded(printer01)
-    #t2 = threaded(printer01)
-    #for i in range(1000):
+    # t1 = threaded(printer01)
+    # t2 = threaded(printer01)
+    # for i in range(1000):
     #    t1.send(i)
     #    t2.send(i)
 
     Thread(target=send_func, args=(printer01,)).start()
     Thread(target=send_func, args=(printer01,)).start()
-
